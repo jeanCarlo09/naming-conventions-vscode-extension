@@ -20,6 +20,11 @@ import { NamingConvention } from "./enums/naming-convention.enum";
 // Priorize separations characters
 // (white space) - _ . ...el _ si es el primer character no tomarlo en cuenta, el orden se basa en este orden
 // Si se encuentra otro characters que no sea letra, número o separador, remplace por un vacío
+
+// TODO: Add tests with all comands of naming conventions
+// TODO: Implement multiple selections
+// TODO: detect variables names in selection and transform them (current implementation only works with single words)
+
 const getSelectionStatement = (): vscode.Selection | null => {
   const editor = vscode.window.activeTextEditor;
 
