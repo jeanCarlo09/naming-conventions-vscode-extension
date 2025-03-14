@@ -1,71 +1,58 @@
-# naming-conventions README
+# Naming Conventions
 
-This is the README for your extension "naming-conventions". After writing up a brief description, we recommend including the following sections.
+A simple VSCode extension that transforms text into various naming conventions commonly used in programming.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Transform selected text to different naming conventions:
+  - **camelCase**: `camelCase`
+  - **PascalCase**: `PascalCase`
+  - **snake_case**: `snake_case`
+  - **SCREAMING_SNAKE_CASE**: `SCREAMING_SNAKE_CASE`
+  - **kebab-case**: `kebab-case`
 
-For example if there is an image subfolder under your extension project workspace:
+- Quick transformation via context menu or command palette
+- Preserves alphanumeric characters while removing special characters
+- Works on variables, file names, and any selected text
 
-\!\[feature X\]\(images/feature-x.png\)
+## Usage
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Select text in the editor
+2. Right-click and choose from the available transformations in the context menu
+3. Alternatively, open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and type "Transform to" to see available options
 
-## Requirements
+## Commands
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- `naming-conventions.camelCase`: Transform to camelCase
+- `naming-conventions.pascalCase`: Transform to PascalCase
+- `naming-conventions.snakeCase`: Transform to snake_case
+- `naming-conventions.screamingSnakeCase`: Transform to SCREAMING_SNAKE_CASE
+- `naming-conventions.kebabCase`: Transform to kebab-case
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Since this extension is currently for personal use only:
 
-For example:
+1. Package the extension: `vsce package --no-yarn`
+2. Install from VSIX in VSCode:
+   - Open Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`)
+   - Click on "..." in the top-right corner
+   - Select "Install from VSIX..."
+   - Choose the generated .vsix file
 
-This extension contributes the following settings:
+## Development
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- Clone the repository
+- Run `npm install`
+- Press `F5` to launch a new window with the extension loaded
+- Make changes and reload (`Ctrl+R` or `Cmd+R`)
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- None at this time
 
-## Release Notes
+## Future Improvements
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Add custom keybindings for each transformation
+- Support for batch file renaming
+- Configuration options for preserving certain special characters
